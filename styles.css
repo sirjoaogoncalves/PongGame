@@ -1,0 +1,44 @@
+
+
+/* Reset default margin and padding */
+body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set background color and center content in desktop mode */
+body {
+  background-color: #222; /* Dark background color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set height to viewport height */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Set max width for the pong container */
+#pongContainer {
+  max-width: 800px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style for the title */
+.title {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #fff; /* White text color */
+}
+
+/* Style for the description */
+.description {
+  font-size: 18px;
+  color: #ccc; /* Lighter text color */
+}
+
+/* Style for the canvas */
+#pongCanvas {
+  border: 1px solid #666; /* Add border to indicate canvas limits */
+  margin-top: 20px;
+  max-width: 100%; /* Make canvas responsive */
+}
