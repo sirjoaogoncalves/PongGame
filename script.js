@@ -58,6 +58,10 @@ function update() {
 	// Update computer paddle movement to track the ball's Y position
 	const targetY = ballY - PADDLE_HEIGHT / 2; // Target Y position of ball
 
+	// Ensure paddles do not go outside the canvas
+	playerPaddleY = Math.max(Math.min(playerPaddleY, GAME_HEIGHT - PADDLE_HEIGHT), 0);
+	computerPaddleY = Math.max(Math.min(computerPaddleY, GAME_HEIGHT - PADDLE_HEIGHT), 0);
+
 	// Move computer paddle towards the target Y position
 	if (computerPaddleY + PADDLE_HEIGHT / 2 < targetY && computerPaddleY < GAME_HEIGHT - PADDLE_HEIGHT) {
 		computerPaddleY += COMPUTER_PADDLE_SPEED;
